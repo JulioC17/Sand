@@ -1,19 +1,41 @@
 import './style.css'
+import login from './componentes/login/login'
+import main from './componentes/principal/principal'
 import anime from 'animejs'
 
-anime({
-  targets: ".box",
-  translateY: [window.innerHeight, "50%"],
-  duration: 1000,
-  easing: "easeOutElastic(1, 1)",
-})
 
-anime({
-  targets:".h1",
-  translateY: [-window.innerHeight, "50%"],
-  duration:1300,
-  easing: "easeOutElastic(1, 1.5)"
-})
+
+
+const registeredUser = localStorage.getItem("usuario")
+    if(registeredUser === null) {  //si no hay usuario registrado llama a login() que pinta el login y da una alerta si no escribe nada en los inputs
+        login()
+    }else if (registeredUser !== null){
+        console.log("hola");
+        
+    }
+
+
+
+
+
+
+
+
+        
+
+        
+        
+
+
+
+
+
+
+
+
+    
+
+
 
 
 
