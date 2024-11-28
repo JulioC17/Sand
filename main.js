@@ -7,7 +7,7 @@ import anime from 'animejs'
 
 
 const registeredUser = localStorage.getItem("usuario")
-    if(registeredUser === null) {  //si no hay usuario registrado llama a login() que pinta el login y da una alerta si no escribe nada en los inputs
+    if(registeredUser === null) {  //si no hay usuario registrado llama a login() que pinta el login y da una alerta si no escribe nada en los inputs o almacena los datos del ususario
         login()
     }else if (registeredUser !== null){
         console.log("hola");
