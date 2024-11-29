@@ -2,13 +2,16 @@ import anime from "animejs";
 import './principal.css'
 
 const main = () => {
-        const nameInput = document.querySelector("#name")
-        const workInput = document.querySelector("#work")
-        const submitBtn = document.querySelector("#submit")
+        const name = localStorage.getItem("usuario")
+        const work = localStorage.getItem("localTrabajo")
         
-        submitBtn.addEventListener("click", () => {
-            
-        })
+        document.querySelector("body").innerHTML = `
+            <h1>${name}</h1>
+           
+        `
+        
+        
+       
     }
 
 export default main

@@ -1,5 +1,6 @@
 import anime from 'animejs';
 import './login.css'
+import main from '../principal/principal';
 
 
 
@@ -29,6 +30,7 @@ const alerta = () => { //esto maneja que el usuario no deje campos en blanco env
         }else{
             localStorage.setItem("usuario", nameInput.value)
             localStorage.setItem("localTrabajo", workInput.value)
+            main()
         }
     })
 }
