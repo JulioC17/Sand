@@ -11,7 +11,6 @@ const timeup = () => {
     const exitHour = date.getTime()
     const getHistoric = JSON.parse(localStorage.getItem("historico"))
 
-    /* const historic = localStorage.getItem("historico") */
     if(localStorage.getItem("historico") === null){
        localStorage.setItem("historico", JSON.stringify([]))
        const historic = JSON.parse(localStorage.getItem         ("historico"))
@@ -31,7 +30,7 @@ const timeup = () => {
            
             <div id = "cronometro">
                 <h2 id = "journal">Jornada Total de Hoy</h2>
-                <h1>00:00:00</h1>
+                <h1 id = "time"></h1>
             </div>
                 
             <div id = "entry">
@@ -47,6 +46,8 @@ const timeup = () => {
             <button id = "desfichar">DESFICHAR</button>
         </div>
     `
+
+    
 
 
     
