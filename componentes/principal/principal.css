@@ -1,0 +1,89 @@
+#principal{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 380px;
+    grid-template-rows: 50px 50px 50px 400px;
+    gap: 100px;
+    align-items: center;
+    justify-items: center;
+}
+
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#historic{
+    background-color: #edb88b;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+    width: 100px;
+    font-size: 1.2rem;
+    transition: 0.2s;
+}
+
+#edit{
+    background-color: #edb88b;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+    width: 100px;
+    font-size: 1.2rem;
+    transition: 0.2s;
+}
+
+#historic:hover{
+    box-shadow: 3px 3px 5px rgb(0, 0, 0);
+    background-color: #000000;
+    color: #edb88b;
+    cursor: pointer;
+}
+
+#edit:hover{
+    box-shadow: 3px 3px 5px rgb(0, 0, 0);
+    background-color: #000000;
+    color: #edb88b;
+    cursor: pointer;
+}
+
+#welcome{
+    font-size: 1.5rem;
+    color: #edb88b;
+    text-shadow: 1px 1px 3px rgb(0, 0, 0);
+    letter-spacing: 1px;
+}
+
+span{
+    color: white;
+    text-shadow: 1px 1px 3px rgb(0, 0, 0);
+    font-size: 2rem;
+
+}
+
+#worked{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#fichar{
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    font-size: 2rem;
+    background: linear-gradient(to bottom, white, green);
+    transition: 0.2s;
+    transform-origin: bottom;
+    
+    
+}
+
+#fichar:hover{
+    box-shadow: 0.1px 0.1px 20px white;
+    position: relative;
+    scale: 1.1;
+    cursor: pointer;
+}
