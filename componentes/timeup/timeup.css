@@ -1,0 +1,63 @@
+#timeup{
+    width: 400px;
+    padding: 20px;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 380px;
+    grid-template-rows: 100px 50px 50px 400px;
+    gap: 75px;
+    align-items: center;
+    justify-items: center;
+}
+
+#cronometro{
+   padding: 20px;
+   margin: 20px;
+   border: solid #ffffff48 1px;
+   background-color: rgba(255, 255, 255, 0.1);
+   border-radius: 10px;
+   font-size: 1.2rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+#entry{
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    border: solid #ffffff48 1px;
+   background-color: rgba(255, 255, 255, 0.1);
+   border-radius: 10px;
+   padding: 10px;
+}
+
+#local{
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    border: solid #ffffff48 1px;
+   background-color: rgba(255, 255, 255, 0.1);
+   border-radius: 10px;
+   padding: 10px;
+}
+
+#desfichar{
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    font-size: 2rem;
+    background: linear-gradient(to bottom, white, red);
+    transition: 0.2s;
+    transform-origin: bottom;
+}
+
+#desfichar:hover{
+    box-shadow: 0.1px 0.1px 20px white;
+    position: relative;
+    scale: 1.1;
+    cursor: pointer;
+}

@@ -1,5 +1,6 @@
 import anime from "animejs";
 import './principal.css'
+import timeup from "../timeup/timeup";
 
 const main = () => { //duncion que pinta los elementos de la pagina principal
         const name = localStorage.getItem("usuario")
@@ -23,6 +24,13 @@ const main = () => { //duncion que pinta los elementos de la pagina principal
             
            </div>
         `
+
+const ficharBtn = document.querySelector("#fichar")
+
+ficharBtn.addEventListener("click", () => {
+    timeup()
+    
+})
 
  anime({ // animaciones de Principal
             targets: '#navbar',

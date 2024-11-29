@@ -77,8 +77,6 @@ span{
     background: linear-gradient(to bottom, white, green);
     transition: 0.2s;
     transform-origin: bottom;
-    
-    
 }
 
 #fichar:hover{
