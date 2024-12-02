@@ -4,7 +4,6 @@ import timeup from "../timeup/timeup";
 
 const main = () => { //duncion que pinta los elementos de la pagina principal
         const name = localStorage.getItem("usuario")
-        const work = localStorage.getItem("localTrabajo")
         
         document.querySelector("body").innerHTML = `
            <div id = "principal">
@@ -28,6 +27,7 @@ const main = () => { //duncion que pinta los elementos de la pagina principal
 const ficharBtn = document.querySelector("#fichar")
 
 ficharBtn.addEventListener("click", () => {
+    localStorage.setItem("tempTime", new Date().getTime())
     timeup()
     
 })

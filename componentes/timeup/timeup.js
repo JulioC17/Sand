@@ -1,36 +1,19 @@
 import './timeup.css'
+import anime from 'animejs'
 
-const timeup = () => {
+const timeup = () => { //funcion para pintar la pagina de fichaje
     const date = new Date()
-    const dateDay = date.getDay()
     const dateHours = date.getHours()
     const dateMinutes = date.getMinutes()
     const dateSeconds = date.getSeconds()
     const completeHour = `${dateHours.toString().padStart(2, '0')}:${dateMinutes.toString().padStart(2, '0')}:${dateSeconds.toString().padStart(2, '0')}`
-    const entryHour = date.getTime()
-    const exitHour = date.getTime()
-    const getHistoric = JSON.parse(localStorage.getItem("historico"))
-
-    if(localStorage.getItem("historico") === null){
-       localStorage.setItem("historico", JSON.stringify([]))
-       const historic = JSON.parse(localStorage.getItem         ("historico"))
-       const firstEntry = {
-        "mes" : date.toLocaleString("es-ES", {month: 'long'}),
-        'fechaDia' : {
-            "diaDelMes" : dateDay,
-            "entryHour" : entryHour,
-            "stringEntryHour" : completeHour
-        }
-        }
-        localStorage.setItem("historico", JSON.stringify(firstEntry))
-    }//else que falta por poner aqui
-
+   
     document.querySelector("body").innerHTML = `
         <div id = "timeup">
            
             <div id = "cronometro">
                 <h2 id = "journal">Jornada Total de Hoy</h2>
-                <h1 id = "time"></h1>
+                <h1 id = "time">00:00:00</h1>
             </div>
                 
             <div id = "entry">
@@ -47,16 +30,71 @@ const timeup = () => {
         </div>
     `
 
-    
+    const cronometro = () => { //funcion para hacer y pintar el cronometro
+        let interval = setInterval(function () {
+            const currentTime = new Date().getTime()
+            const getTempTime = localStorage.getItem("tempTime")
+            const updateTime = currentTime - getTempTime
 
+            const updateHours = Math.floor(updateTime / 3600000)
+            const updateMinutes = Math.floor((updateTime % 3600000) / 60000)
+            const updateSeconds = Math.floor((updateTime % 60000) / 1000) 
+       
+            const updateFormattedTime = `${updateHours.toString().padStart(2, '0')}:${updateMinutes.toString().padStart(2, '0')}:${updateSeconds.toString().padStart(2, '0')}`
 
+            document.querySelector("#time").innerHTML = updateFormattedTime
     
+        },1000)
+    }
 
+    cronometro()
 
-    
-    
-    
-   
+    anime({ // animaciones de Principal
+        targets: '#cronometro',
+        translateY: 50,
+        opacity: [0, 1],
+        duration:1000,
+        easing: "easeOutElastic(0.5, 1)"
+    });
+
+    anime({ // animaciones de Principal
+        targets: '#entry',
+        translateY: 50,
+        opacity: [0, 1],
+        duration:2000,
+        easing: "easeOutElastic(0.5, 1)"
+    });
+
+    anime({ // animaciones de Principal
+        targets: '#local',
+        translateY: 50,
+        opacity: [0, 1],
+        duration:3000,
+        easing: "easeOutElastic(0.5, 1)"
+    });
+
+    anime({ // animaciones de Principal
+        targets: '#desfichar',
+        translateY: 50,
+        opacity: [0, 1],
+        duration:4000,
+        easing: "easeOutElastic(0.5, 1)"
+    });
+
 }
 
 export default timeup
+
+/* if(localStorage.getItem("historico") === null){
+    localStorage.setItem("historico", JSON.stringify([]))
+    const historic = JSON.parse(localStorage.getItem         ("historico"))
+    const firstEntry = {
+     "mes" : date.toLocaleString("es-ES", {month: 'long'}),
+     'fechaDia' : {
+         "diaDelMes" : dateDay,
+         "entryHour" : entryHour,
+         "stringEntryHour" : completeHour
+     }
+     }
+     localStorage.setItem("historico", JSON.stringify(firstEntry))
+ } */

@@ -1,6 +1,5 @@
 #timeup{
-    width: 400px;
-    padding: 20px;
+    width: 380px;
     display: grid;
     height: 100vh;
     grid-template-columns: 380px;
@@ -8,10 +7,10 @@
     gap: 75px;
     align-items: center;
     justify-items: center;
+    margin-top: 10px;
 }
 
 #cronometro{
-   padding: 20px;
    margin: 20px;
    border: solid #ffffff48 1px;
    background-color: rgba(255, 255, 255, 0.1);
@@ -21,11 +20,12 @@
    flex-direction: column;
    justify-content: center;
    align-items: center;
+   padding: 10px;
 }
 
 #entry{
     display: flex;
-    width: 400px;
+    width: 380px;
     justify-content: space-between;
     font-size: 1.2rem;
     border: solid #ffffff48 1px;
@@ -36,13 +36,14 @@
 
 #local{
     display: flex;
-    width: 400px;
+    width: 380px;
     justify-content: space-between;
     font-size: 1.2rem;
     border: solid #ffffff48 1px;
    background-color: rgba(255, 255, 255, 0.1);
    border-radius: 10px;
    padding: 10px;
+   
 }
 
 #desfichar{
