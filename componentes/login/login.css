@@ -1,11 +1,21 @@
+:root{
+  --color1: #3c7a89;
+  --color2: #2e4756;
+  --color3: #16262e;
+  --color4: #9fa2b2;
+  --color5: #dbc2cf;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
   }
   
   body{
-    background: linear-gradient(to bottom, #005e7c, #040F16);
+    background-color:var(--color1);
     background-repeat: no-repeat;
     height: 100vh;
     color:white;
@@ -16,27 +26,39 @@
 }
 
   #brand{
+   /*  color: var(--color5); */
     font-size: 5rem;
     position: absolute;
     top: 50px;
-    letter-spacing: 10px;
+    letter-spacing: 5px;
+    color: var(--color5);
+    text-shadow: 7px 7px 10px rgba(0, 0, 0, 0.487);
+    border: 2px solid var(--color5);
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.486);
+    background-color: var(--color2);
 }
 
   #login{
-    border: solid #ffffff48 1px;
     padding: 20px;
+    position: absolute;
+    top: 350px;
     display: flex;
     flex-direction: column;
-    border-radius: 10px;
+    border-radius: 20px;
     height: 300px;
     width: 300px;
     justify-content: space-evenly;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--color2);
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.517);
+    border: 2px solid var(--color5);
 }
 
   div input {
-    height: 35px;
+    background-color: white;
+    height: 40px;
     width: 250px;
     border-radius: 10px;
     text-align: center;
@@ -45,15 +67,26 @@
 
 #submit{
     width: 120px;
-    height: 30px;
+    height: 40px;
+    font-size: 1.2rem;
     border-radius: 10px;
-    background-color: #001242;
-    color: white;
+    background-color:var(--color5);
+    color: var(--color2);
+    transition: 0.3s;
+}
+
+#submit:hover{
+  position: relative;
+  transform: scale(1.1);
+  box-shadow: 1px 1px 7px white;
 }
 
   footer{
     position: absolute;
     bottom: 20px;
+    color: var(--color5);
+    font-size: 1.2rem;
+    text-shadow: 7px 7px 10px rgba(0, 0, 0, 0.437);
 }
 
   

@@ -1,64 +1,83 @@
+:root{
+    --color1: #3c7a89;
+    --color2: #2e4756;
+    --color3: #16262e;
+    --color4: #9fa2b2;
+    --color5: #dbc2cf;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
 #principal{
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 100vh;
-    grid-template-columns: 380px;
-    grid-template-rows: 50px 50px 50px 400px;
-    gap: 100px;
-    align-items: center;
-    justify-items: center;
+    
 }
 
 #navbar{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    gap: 120px;
     width: 100%;
 }
 
 #historic{
-    background-color: #edb88b;
-    padding: 5px;
-    margin: 5px;
-    border-radius: 10px;
     width: 100px;
+    height: 40px;
     font-size: 1.2rem;
-    transition: 0.2s;
+    border-radius: 10px;
+    background-color:var(--color2);
+    color: var(--color5);
+    transition: 0.3s;
+    border: 1px solid var(--color5);
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.487);
 }
 
 #edit{
-    background-color: #edb88b;
-    padding: 5px;
-    margin: 5px;
-    border-radius: 10px;
     width: 100px;
+    height: 40px;
     font-size: 1.2rem;
-    transition: 0.2s;
+    border-radius: 10px;
+    background-color:var(--color2);
+    color: var(--color5);
+    transition: 0.3s;
+    border: 1px solid var(--color5);
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.487);
 }
 
 #historic:hover{
-    box-shadow: 3px 3px 5px rgb(0, 0, 0);
-    background-color: #000000;
-    color: #edb88b;
-    cursor: pointer;
+    position: relative;
+  transform: scale(1.1);
+  box-shadow: 1px 1px 7px white;
 }
 
 #edit:hover{
-    box-shadow: 3px 3px 5px rgb(0, 0, 0);
-    background-color: #000000;
-    color: #edb88b;
-    cursor: pointer;
+    position: relative;
+  transform: scale(1.1);
+  box-shadow: 1px 1px 7px white;
+}
+
+#bienvenida{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 #welcome{
     font-size: 1.5rem;
-    color: #edb88b;
+    color: var(--color5);
     text-shadow: 1px 1px 3px rgb(0, 0, 0);
     letter-spacing: 1px;
+    font-size: 2rem;
 }
 
-span{
-    color: white;
-    text-shadow: 1px 1px 3px rgb(0, 0, 0);
-    font-size: 2rem;
+#nameWelcome{
+    color: var(--color2);
+    text-shadow: 1px 1px 5px rgb(255, 255, 255);
+    font-size: 3.5rem;
 
 }
 
@@ -67,16 +86,25 @@ span{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 150px;
+    gap: 20px;
+    position: relative;
+    bottom: 75px;
+    background-color: var(--color2);
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.517);
+    border: 2px solid var(--color5);
+    border-radius: 20px;
+    color: var(--color5);
 }
 
 #fichar{
-    width: 300px;
-    height: 200px;
+    height: 100px;
     border-radius: 20px;
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.413);
+    border: 2px solid var(--color3);
+    background-image: linear-gradient(to bottom, green, rgb(224, 224, 224) );
     font-size: 2rem;
-    background: linear-gradient(to bottom, white, green);
-    transition: 0.2s;
-    transform-origin: bottom;
+    transition: 0.3s;
 }
 
 #fichar:hover{

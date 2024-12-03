@@ -11,12 +11,15 @@ const main = () => { //duncion que pinta los elementos de la pagina principal
                     <button id = "historic">Histórico</button>
                     <button id = "edit">Editar</button>
                 </nav>
-
-                <h1 id = "welcome">Bienvenido<span> ${name}</span></h1>
             
-                <section id = "worked">
+            <div id = "bienvenida">   
+                <h1 id = "welcome">Bienvenido</h1>
+                <h2 id = "nameWelcome">${name}</h2>
+            </div>
+                
+            <section id = "worked">
                     <h3>Trabajado este mes:</h3>
-                    <h2>10 horas</h2>
+                    <h2 id = "trabajado"></h2>
                 </section>
 
                 <button id = "fichar">FICHAR</button>
@@ -49,10 +52,18 @@ anime({
 });
 
 anime({ 
-    targets: '#worked',
+    targets: '#nameWelcome',
     translateY: 50,
     opacity: [0, 1],
     duration:3000,
+    easing: "easeOutElastic(0.5, 1)"
+});
+
+anime({ 
+    targets: '#worked',
+    translateY: 50,
+    opacity: [0, 1],
+    duration:4000,
     easing: "easeOutElastic(0.5, 1)"
 });
 
