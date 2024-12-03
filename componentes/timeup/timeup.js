@@ -1,5 +1,6 @@
 import './timeup.css'
 import anime from 'animejs'
+import main from '../principal/principal'
 
 const timeup = () => { //funcion para pintar la pagina de fichaje
     const date = new Date()
@@ -46,6 +47,8 @@ const timeup = () => { //funcion para pintar la pagina de fichaje
     
         },1000)
     }
+
+    
 
     cronometro()
 
