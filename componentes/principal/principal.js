@@ -69,7 +69,7 @@ anime({
 
 anime({ 
     targets: '#fichar',
-    translateY: -50,
+    translateY: 50,
     opacity: [0, 1],
     duration:2000,
     easing: "easeOutElastic(0.5, 1)"

@@ -12,6 +12,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
+    width: 320px;
     
 }
 
@@ -105,6 +106,8 @@
     background-image: linear-gradient(to bottom, green, rgb(224, 224, 224) );
     font-size: 2rem;
     transition: 0.3s;
+    position: relative;
+    bottom: 120px;
 }
 
 #fichar:hover{
