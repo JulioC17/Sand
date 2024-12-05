@@ -45,41 +45,10 @@ const edit = () => {
         targets: '#inputEdit',
         translateY: 50,
         opacity: [0, 1],
-        duration:1000,
-        easing: "easeOutElastic(0.5, 1)"
-    });
-
-    anime({ // animaciones de edit
-        targets: '#nameEdit',
-        translateY: 50,
-        opacity: [0, 1],
         duration:2000,
         easing: "easeOutElastic(0.5, 1)"
     });
 
-    anime({ // animaciones de edit
-        targets: '#workEdit',
-        translateY: 50,
-        opacity: [0, 1],
-        duration:3000,
-        easing: "easeOutElastic(0.5, 1)"
-    });
-
-    anime({ // animaciones de edit
-        targets: '#check',
-        translateY: 50,
-        opacity: [0, 1],
-        duration:4000,
-        easing: "easeOutElastic(0.5, 1)"
-    });
-
-    anime({ // animaciones de edit
-        targets: '#submitEdit',
-        translateY: 50,
-        opacity: [0, 1],
-        duration:5000,
-        easing: "easeOutElastic(0.5, 1)"
-    });
 }
 
 export default edit
