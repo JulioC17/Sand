@@ -1,6 +1,6 @@
 import './timeup.css'
 import anime from 'animejs'
-import record from '../record/record'
+import record from '../funciones/record'
 
 
 const timeup = () => { //funcion para pintar la pagina de fichaje
@@ -45,17 +45,19 @@ const timeup = () => { //funcion para pintar la pagina de fichaje
        
             const updateFormattedTime = `${updateHours.toString().padStart(2, '0')}:${updateMinutes.toString().padStart(2, '0')}:${updateSeconds.toString().padStart(2, '0')}`
 
-            document.querySelector("#time").innerHTML = updateFormattedTime
-    
+            const timeMark =document.querySelector("#time")
+            
+            if(timeMark){
+                timeMark.innerHTML = updateFormattedTime
+            }
         },1000)
     }
 
+    cronometro()
+
     document.querySelector("#desfichar").addEventListener("click", () => {
         record()
-        
     })
-
-    cronometro()
 
     anime({ // animaciones de Principal
         targets: '#cronometro',

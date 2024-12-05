@@ -1,0 +1,56 @@
+:root{
+    --color1: #3c7a89;
+    --color2: #2e4756;
+    --color3: #16262e;
+    --color4: #9fa2b2;
+    --color5: #dbc2cf;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#inputEdit{
+    padding: 20px;
+    top: 350px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    height: 300px;
+    width: 300px;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--color2);
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.517);
+    border: 2px solid var(--color5);
+    height: 400px;
+}
+
+#nameEdit, #workEdit, #check, #submitEdit{
+    position: relative;
+    bottom: 30px;
+}
+
+#check{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#remove{
+    font-size: 0.8rem;
+}
+
+#allRemove{
+   height: 25px;
+   width: 25px;
+   border-radius: 5px;
+}
+
+#submitEdit{
+    width: 120px;
+    height: 40px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background-color:var(--color5);
+    color: var(--color2);
+    transition: 0.3s;
+}

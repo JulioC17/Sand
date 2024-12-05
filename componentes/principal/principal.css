@@ -21,6 +21,7 @@
     justify-content: space-around;
     gap: 120px;
     width: 100%;
+    margin-top: 30px;
 }
 
 #historic{
@@ -96,6 +97,7 @@
     border: 2px solid var(--color5);
     border-radius: 20px;
     color: var(--color5);
+    text-align: center;
 }
 
 #fichar{

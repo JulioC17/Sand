@@ -1,84 +1,85 @@
 import anime from "animejs";
 import './principal.css'
 import timeup from "../timeup/timeup";
+import renderWeek from "../funciones/renderWeek";
+import edit from "../edit/edit";
+
 
 const main = () => { //duncion que pinta los elementos de la pagina principal
-        const name = localStorage.getItem("usuario")
+    const name = localStorage.getItem("usuario")
         
-        document.querySelector("body").innerHTML = `
-           <div id = "principal">
-                <nav id = "navbar">
-                    <button id = "historic">Histórico</button>
-                    <button id = "edit">Editar</button>
-                </nav>
+    document.querySelector("body").innerHTML = `
+       <div id = "principal">
+            <nav id = "navbar">
+                <button id = "historic">Histórico</button>
+                <button id = "edit">Editar</button>
+            </nav>
             
-            <div id = "bienvenida">   
+             <div id = "bienvenida">   
                 <h1 id = "welcome">Bienvenido</h1>
                 <h2 id = "nameWelcome">${name}</h2>
             </div>
                 
             <section id = "worked">
-                    <h3>Trabajado este mes:</h3>
-                    <h2 id = "trabajado"></h2>
-                </section>
+                <h3>Trabajado esta Semana:</h3>
+                <h2 id = "trabajado"></h2>
+             </section>
 
-                <button id = "fichar">FICHAR</button>
+            <button id = "fichar">FICHAR</button>
             
-           </div>
+        </div>
         `
 
-const ficharBtn = document.querySelector("#fichar")
-
-ficharBtn.addEventListener("click", () => {
-    localStorage.setItem("tempTime", new Date().getTime())
-    timeup()
+    const ficharBtn = document.querySelector("#fichar")
+    const trabajado = document.querySelector("#trabajado")
+    const editBtn = document.querySelector("#edit")
     
-})
+    ficharBtn.addEventListener("click", () => {//trabajamos eventos del boton fichar
+        localStorage.setItem("tempTime", new Date().getTime())
+        timeup()
+    })
 
- anime({ // animaciones de Principal
-            targets: '#navbar',
-            translateY: 50,
-            opacity: [0, 1],
-            duration:1000,
-            easing: "easeOutElastic(0.5, 1)"
-});
+    editBtn.addEventListener("click", () => {//trabajamos eventos del botn editar
+        edit()
+    })
 
-anime({ 
+    renderWeek(trabajado)
+    
+
+    
+
+    anime({ 
         targets: '#welcome',
         translateY: 50,
         opacity: [0, 1],
         duration:2000,
         easing: "easeOutElastic(0.5, 1)"
-});
+    });
 
-anime({ 
+    anime({ 
     targets: '#nameWelcome',
     translateY: 50,
     opacity: [0, 1],
     duration:3000,
     easing: "easeOutElastic(0.5, 1)"
-});
+    });
 
-anime({ 
+    anime({ 
     targets: '#worked',
     translateY: 50,
     opacity: [0, 1],
     duration:4000,
     easing: "easeOutElastic(0.5, 1)"
-});
+    });
 
-anime({ 
+    anime({ 
     targets: '#fichar',
     translateY: 50,
     opacity: [0, 1],
     duration:2000,
     easing: "easeOutElastic(0.5, 1)"
-});
+    });
 
-      
-        
-        
-       
-    }
+}
 
 export default main
