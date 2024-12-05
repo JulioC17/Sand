@@ -3,6 +3,7 @@ import './principal.css'
 import timeup from "../timeup/timeup";
 import renderWeek from "../funciones/renderWeek";
 import edit from "../edit/edit";
+import historic from "../historic/historic";
 
 
 const main = () => { //duncion que pinta los elementos de la pagina principal
@@ -33,6 +34,7 @@ const main = () => { //duncion que pinta los elementos de la pagina principal
     const ficharBtn = document.querySelector("#fichar")
     const trabajado = document.querySelector("#trabajado")
     const editBtn = document.querySelector("#edit")
+    const historicBtn = document.querySelector("#historic")
     
     ficharBtn.addEventListener("click", () => {//trabajamos eventos del boton fichar
         localStorage.setItem("tempTime", new Date().getTime())
@@ -42,6 +44,11 @@ const main = () => { //duncion que pinta los elementos de la pagina principal
     editBtn.addEventListener("click", () => {//trabajamos eventos del botn editar
         edit()
     })
+
+    historicBtn.addEventListener("click", () => {//trabajamos los eventos del botn historic
+        historic()
+    })
+
 
     renderWeek(trabajado)
     
