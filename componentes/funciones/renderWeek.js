@@ -25,7 +25,7 @@ const renderWeek = (titulo) => {
             }
         }
         const convertedHours = Math.floor(countHoursPerWeek / 3600000)
-        const convertedMinutes = Math.floor((countHoursPerWeek % 1000) / 60)
+        const convertedMinutes = Math.floor((countHoursPerWeek % 3600000) / 60000)
     
         titulo.innerHTML = `${convertedHours.toString().padStart(2, '0')} horas y ${convertedMinutes.toString().padStart(2, '0')} minutos`
     
