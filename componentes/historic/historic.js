@@ -40,7 +40,8 @@ const historic = () => {
     const titulomes = document.querySelector("#h3actual")
     const horasMes = document.querySelector("#h2horas")
     tituloMes(titulomes)
-    count(horasMes)
+
+    count()
     
     
 }

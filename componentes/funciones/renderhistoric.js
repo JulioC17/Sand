@@ -26,6 +26,7 @@ export const count = (dias, horas) => {
 
             meses.forEach(mes => {
                 const dias = Object.values(mes)
+                console.log(mes);
                 
                 dias.forEach(horas => {
                     horasMes += horas
@@ -34,8 +35,8 @@ export const count = (dias, horas) => {
         }
     }
 
-    horas.innerHTML = horasMes
-    console.log(horasMes);
+    /* horas.innerHTML = horasMes
+    console.log(horasMes); */
     
     //formatear las horas del mes
     
