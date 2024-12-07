@@ -7,20 +7,26 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+#editar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #inputEdit{
-    padding: 20px;
-    top: 350px;
+    padding: 5%;
     display: flex;
     flex-direction: column;
-    border-radius: 20px;
-    height: 300px;
-    width: 300px;
+    border-radius: 10px;
+    height: 50%;
+    width: 80%;
     justify-content: space-evenly;
     align-items: center;
     background-color: var(--color2);
     box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.517);
-    border: 2px solid var(--color5);
-    height: 400px;
+    border: 1px solid var(--color5);
 }
 
 
@@ -28,7 +34,17 @@
     width: 100%;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5%;
+}
+
+#nameEdit{
+    height: 13%;
+    width: 90%;
+}
+
+#workEdit{
+    height: 13%;
+    width: 90%;
 }
 
 #remove{
@@ -36,8 +52,8 @@
 }
 
 #allRemove{
-   height: 25px;
-   width: 25px;
+   height: 100%;
+   width: 20%;
    border-radius: 5px;
 }
 

@@ -11,24 +11,26 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: s;
-    gap: 80px;
-    height: 100vh;
+    align-items: center;
+    gap: 10%;
+    height: 100%;
+    width: 100%;
     
 }
 
 #navbar{
     display: flex;
     justify-content: space-around;
-    gap: 120px;
-    width: 100%;
+    gap: 40%;
+    width: 90%;
+    height: 5%;
 }
 
 #historic{
-    width: 100px;
-    height: 40px;
+    width: 30%;
+    height: 100%;
     font-size: 1.2rem;
-    border-radius: 10px;
+    border-radius: 7px;
     background-color:var(--color2);
     color: var(--color5);
     transition: 0.3s;
@@ -37,10 +39,10 @@
 }
 
 #edit{
-    width: 100px;
-    height: 40px;
+    width: 30%;
+    height: 100%;
     font-size: 1.2rem;
-    border-radius: 10px;
+    border-radius: 7px;
     background-color:var(--color2);
     color: var(--color5);
     transition: 0.3s;
@@ -76,9 +78,9 @@
 }
 
 #nameWelcome{
-    color: var(--color2);
-    text-shadow: 1px 1px 5px rgb(255, 255, 255);
-    font-size: 3.5rem;
+    color: var(--color5);
+    text-shadow: 1px 1px 5px rgb(0, 0, 0);
+    font-size: 3rem;
 
 }
 
@@ -87,24 +89,29 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 150px;
+    height: 20%;
     gap: 20px;
     position: relative;
     bottom: 75px;
     background-color: var(--color2);
     box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.517);
-    border: 2px solid var(--color5);
-    border-radius: 20px;
+    border: 1px solid var(--color5);
+    border-radius: 10px;
     color: var(--color5);
     text-align: center;
+    font-size: 0.9rem;
+    padding: 5%;
+    margin-top: 10%;
+    width: 90%;
 }
 
 #fichar{
-    height: 100px;
-    border-radius: 20px;
+    height: 8%;
+    width: 90%;
+    border-radius: 10px;
     box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.413);
-    border: 2px solid var(--color3);
-    background-image: linear-gradient(to bottom, green, rgb(224, 224, 224) );
+    border: 1px solid var(--color3);
+    background-image: linear-gradient(to bottom, rgb(7, 130, 7), rgb(163, 245, 163) );
     font-size: 2rem;
     transition: 0.3s;
     position: relative;

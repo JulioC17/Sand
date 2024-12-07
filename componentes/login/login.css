@@ -15,9 +15,10 @@
   }
   
   body{
-    background-color:var(--color1);
+    background-image: linear-gradient(to bottom, var(--color1), var(--color3));
     background-repeat: no-repeat;
     height: 100vh;
+    width: 100vw;
     color:white;
     display: flex;
     flex-direction: column;
@@ -26,14 +27,14 @@
 }
 
   #brand{
-   /*  color: var(--color5); */
-    font-size: 5rem;
+    color: var(--color5);
+    font-size: 3rem;
     position: absolute;
     top: 50px;
     letter-spacing: 5px;
     color: var(--color5);
     text-shadow: 7px 7px 10px rgba(0, 0, 0, 0.487);
-    border: 2px solid var(--color5);
+    border: 1px solid var(--color5);
     padding: 15px;
     border-radius: 20px;
     box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.486);
@@ -47,26 +48,26 @@
     display: flex;
     flex-direction: column;
     border-radius: 20px;
-    height: 300px;
-    width: 300px;
+    height: 40%;
+    width:80%;
     justify-content: space-evenly;
     align-items: center;
     background-color: var(--color2);
     box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.517);
-    border: 2px solid var(--color5);
+    border: 1px solid var(--color5);
 }
 
   div input {
     background-color: white;
-    height: 40px;
-    width: 250px;
+    height: 15%;
+    width: 90%;
     border-radius: 10px;
     text-align: center;
     font-size: 1rem;
 }
 
 #submit{
-    width: 120px;
+    width: 45%;
     height: 40px;
     font-size: 1.2rem;
     border-radius: 10px;

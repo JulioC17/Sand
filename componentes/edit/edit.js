@@ -4,7 +4,7 @@ import anime from 'animejs'
 
 const edit = () => {
     document.querySelector("body").innerHTML = `
-    <div id "editar">    
+    <div id = "editar">    
         <div id = "inputEdit">
             
             <input type="text" placeholder="Escribe tu nuevo nombre" id = "nameEdit">

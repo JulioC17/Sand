@@ -6,7 +6,7 @@ import main from '../principal/principal';
 
 const login = () => {  //esto pinta el login en caso de que el usuario no este registrado 
     document.querySelector("body").innerHTML = `
-    <h1 id = "brand" >Sand</h1>
+    <h1 id = "brand" >OnTime</h1>
     <div id = "login">
         <input type="text" placeholder="Escribe tu nombre" id = "name">
         <input type="text" placeholder="Local de Trabajo" id = "work">
