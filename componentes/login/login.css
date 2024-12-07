@@ -76,11 +76,11 @@
     transition: 0.3s;
 }
 
-#submit:hover{
+/* #submit:hover{
   position: relative;
   transform: scale(1.1);
   box-shadow: 1px 1px 7px white;
-}
+} */
 
   footer{
     position: absolute;
