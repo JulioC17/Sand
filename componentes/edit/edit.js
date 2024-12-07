@@ -38,6 +38,8 @@ const edit = () => {
         }if(inputRemove.checked){
             localStorage.removeItem("record")
             main()
+        }else{
+            alert("Escribe algo")
         }
     })
 

@@ -4,7 +4,9 @@ import record from '../funciones/record'
 
 
 const timeup = () => { //funcion para pintar la pagina de fichaje
-    const date = new Date()
+    let entryTime = localStorage.getItem("tempTime")
+    entryTime = Number(entryTime)
+    const date = new Date(entryTime)
     const dateHours = date.getHours()
     const dateMinutes = date.getMinutes()
     const dateSeconds = date.getSeconds()
@@ -54,6 +56,8 @@ const timeup = () => { //funcion para pintar la pagina de fichaje
     }
 
     cronometro()
+    console.log(entryTime);
+    
 
     document.querySelector("#desfichar").addEventListener("click", () => {
         record()
