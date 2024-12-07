@@ -11,7 +11,6 @@ const timeup = () => { //funcion para pintar la pagina de fichaje
     const dateMinutes = date.getMinutes()
     const dateSeconds = date.getSeconds()
     const completeHour = `${dateHours.toString().padStart(2, '0')}:${dateMinutes.toString().padStart(2, '0')}:${dateSeconds.toString().padStart(2, '0')}`
-    const exitTime = date.getTime()
    
     document.querySelector("body").innerHTML = `
         <div id = "timeup">
@@ -56,9 +55,7 @@ const timeup = () => { //funcion para pintar la pagina de fichaje
     }
 
     cronometro()
-    console.log(entryTime);
     
-
     document.querySelector("#desfichar").addEventListener("click", () => {
         record()
     })

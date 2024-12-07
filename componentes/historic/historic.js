@@ -1,6 +1,7 @@
 import './historic.css'
 import { tituloMes } from '../funciones/renderhistoric'
 import { count } from '../funciones/renderhistoric'
+import main from '../principal/principal'
 
 
 const historic = () => {
@@ -14,7 +15,7 @@ const historic = () => {
                 <h3 id = "h3actual"></h3>
                 
                 <div id = "divDias">
-                    <h2 id = "h2Dias">2</h2>
+                    <h2 id = "h2Dias"></h2>
                     <h3 id = "h3Dias">Días Trabajados</h3>
                 </div>
 
@@ -37,11 +38,16 @@ const historic = () => {
         </div>
     `
 
+    const atrasBtn = document.querySelector("#back").addEventListener("click", () => {
+        main()
+    })
     const titulomes = document.querySelector("#h3actual")
     const horasMes = document.querySelector("#h2horas")
+    const diasMes = document.querySelector("#h2Dias")
+    
     tituloMes(titulomes)
-
-    count()
+    count(diasMes, horasMes)
+    
     
     
 }

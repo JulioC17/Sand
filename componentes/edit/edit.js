@@ -27,7 +27,7 @@ const edit = () => {
     const inputRemove = document.querySelector("#allRemove")
     const editBtn = document.querySelector("#submitEdit")
 
-    editBtn.addEventListener("click", () => {
+    editBtn.addEventListener("click", () => {//manejamos los eventos con respecto a las entradas de estos inputs
         if(!inputEditName.value == ""){
             localStorage.setItem("usuario", inputEditName.value)
             main()
@@ -35,12 +35,16 @@ const edit = () => {
         if(!inputEditLocal.value == ""){
             localStorage.setItem("localTrabajo", inputEditLocal.value)
             main()
-        }if(inputRemove.checked){
+        }
+        if(inputRemove.checked){
             localStorage.removeItem("record")
             main()
-        }else{
-            alert("Escribe algo")
         }
+        if(inputEditName.value == "" && inputEditLocal.value == "" && !inputRemove.checked){
+            alert("escribe algo")
+        }
+
+
     })
 
     anime({ // animaciones de edit
