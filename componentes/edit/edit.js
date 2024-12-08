@@ -4,7 +4,10 @@ import anime from 'animejs'
 
 const edit = () => {
     document.querySelector("body").innerHTML = `
-    <div id = "editar">    
+    <div id = "editar">
+    
+        <button id = "backEdit">Atras</button>
+
         <div id = "inputEdit">
             
             <input type="text" placeholder="Escribe tu nuevo nombre" id = "nameEdit">
@@ -26,6 +29,7 @@ const edit = () => {
     const inputEditLocal = document.querySelector("#workEdit")
     const inputRemove = document.querySelector("#allRemove")
     const editBtn = document.querySelector("#submitEdit")
+    const backEditBtn = document.querySelector("#backEdit")
 
     editBtn.addEventListener("click", () => {//manejamos los eventos con respecto a las entradas de estos inputs
         if(!inputEditName.value == ""){
@@ -47,11 +51,23 @@ const edit = () => {
 
     })
 
+    backEditBtn.addEventListener("click", () => {
+        main()
+    })
+
     anime({ // animaciones de edit
         targets: '#inputEdit',
         translateY: 50,
         opacity: [0, 1],
         duration:2000,
+        easing: "easeOutElastic(0.5, 1)"
+    });
+
+    anime({ // animaciones de edit
+        targets: '#backEdit',
+        translateY: 50,
+        opacity: [0, 1],
+        duration:1000,
         easing: "easeOutElastic(0.5, 1)"
     });
 

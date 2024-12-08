@@ -44,7 +44,7 @@ export const count = (diasTotales, horas) => {//funcion para calcular los dias y
     horas.innerHTML = horasTotalesFormatted//pa dentro ya ostia
 }
 
-export const showWeeksList = (lista) => {
+export const showWeeksList = (lista) => {//esta funcion pinta una lista con los rangos de semanas y las horas trabajadas en esos rangos y los pinta en el div showlist
     
     
     const record = localStorage.getItem("record")
@@ -101,49 +101,6 @@ export const showWeeksList = (lista) => {
    
 }
 
-
-/* Object.values(recordParse).forEach(month => {
-    //buscamos el valor del primer objeto dentro(mes)
-    Object.values(month).forEach(week => {
-        //buscamos el segundo valor dentro(numero de semana)
-        Object.keys(week).forEach(weekName => {//buscamos la clave y la convertimos a number
-            weekName = Number(weekName)
-            
-            Object.keys(recordParse).forEach(year => {
-                year = Number(year)//buscamos el year para poder ponerle numero, inicio y fin a las semanas
-                
-                const startYear = startOfYear(new Date(year, 0, 1))
-                const knowWeeks = addWeeks(startYear, weekName - 1)
-                const startWeek = startOfWeek(knowWeeks, {weekStartsOn: 1})
-                const endWeek = endOfWeek(knowWeeks, {weekStartsOn: 1})
-                const startWeekFormatted = format(startWeek, "ddMMM", {locale: es}).toLocaleLowerCase()
-                const endWeekFormatted = format(endWeek, "ddMMM", {locale: es}).toLowerCase()
-                //obteniendo los datos de la semana y formateandolos
-
-                const joinEndStart = `${startWeekFormatted}-${endWeekFormatted}`
-
-                
-                
-                
-            })
-        })
-        
-    })
-}) */
- 
-
-   /*  Object.values(recordParse).forEach(month => {
-        
-        
-        Object.values(month).forEach(week => {
-            
-            Object.values(week).forEach(day => {
-                let sumWeeksHours = 0
-                
-                Object.values(day).forEach(hour => {
-                    sumWeeksHours += day
-                })
-                console.log(week);
-            })
-        })
-    }) */
+export const showDayList = (dayList) => {
+    
+}

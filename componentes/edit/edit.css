@@ -7,10 +7,26 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+#backEdit{
+    width: 30%;
+    height: 5%;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background-color:var(--color2);
+    color: var(--color5);
+    transition: 0.3s;
+    border: 1px solid var(--color5);
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.487);
+    position: relative;
+    right: 28%;
+    bottom: 7%;
+}
+
 #editar{
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }

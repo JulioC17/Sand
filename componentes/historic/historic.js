@@ -42,6 +42,7 @@ const historic = () => {
     const atrasBtn = document.querySelector("#back").addEventListener("click", () => {
         main()
     })
+    
     const titulomes = document.querySelector("#h3actual")
     const horasMes = document.querySelector("#h2horas")
     const diasMes = document.querySelector("#h2Dias")
