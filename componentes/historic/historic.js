@@ -46,12 +46,14 @@ const historic = () => {
     const horasMes = document.querySelector("#h2horas")
     const diasMes = document.querySelector("#h2Dias")
     const weeksBtn = document.querySelector("#semanas")
+    const showlist = document.querySelector("#showlist")
     
     tituloMes(titulomes)
     count(diasMes, horasMes)
 
     weeksBtn.addEventListener("click", () => {
-        showWeeksList()
+        showlist.innerHTML = ""
+        showWeeksList(showlist)
     })
     
     

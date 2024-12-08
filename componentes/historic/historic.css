@@ -144,5 +144,13 @@
     width: 90%;
     height: 15%;
     overflow-y: auto;
+    padding: 5%;
 }
 
+#showlist > li {
+    display: flex;
+    border-bottom: solid 1px #16262e;
+    justify-content: space-between;
+
+
+}
