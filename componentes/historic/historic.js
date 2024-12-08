@@ -2,6 +2,7 @@ import './historic.css'
 import { tituloMes } from '../funciones/renderhistoric'
 import { count } from '../funciones/renderhistoric'
 import main from '../principal/principal'
+import { showWeeksList } from '../funciones/renderhistoric'
 
 
 const historic = () => {
@@ -44,9 +45,14 @@ const historic = () => {
     const titulomes = document.querySelector("#h3actual")
     const horasMes = document.querySelector("#h2horas")
     const diasMes = document.querySelector("#h2Dias")
+    const weeksBtn = document.querySelector("#semanas")
     
     tituloMes(titulomes)
     count(diasMes, horasMes)
+
+    weeksBtn.addEventListener("click", () => {
+        showWeeksList()
+    })
     
     
     

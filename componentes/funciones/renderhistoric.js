@@ -1,4 +1,4 @@
-import { getMonth, format, getYear } from "date-fns"
+import { getMonth, format, getYear, getWeek, startOfWeek, endOfWeek, addWeeks, startOfYear} from "date-fns"
 import { es } from "date-fns/locale"
 
  export const tituloMes = (titulo) => {//funcion para pinta el me actual en historico
@@ -44,7 +44,46 @@ export const count = (diasTotales, horas) => {//funcion para calcular los dias y
     horas.innerHTML = horasTotalesFormatted//pa dentro ya ostia
 }
 
+export const showWeeksList = (lista) => {
+    
+    let sumWeeksHours = 0
+    const record = localStorage.getItem("record")
+    const recordParse = JSON.parse(record)
+    //recuperamos el objeto de datos y lo parseamos
+    const year = Object.keys(recordParse)
+    console.log(year);
+    
+
+     
+}
 
 
+/* Object.values(recordParse).forEach(month => {
+    //buscamos el valor del primer objeto dentro(mes)
+    Object.values(month).forEach(week => {
+        //buscamos el segundo valor dentro(numero de semana)
+        Object.keys(week).forEach(weekName => {//buscamos la clave y la convertimos a number
+            weekName = Number(weekName)
+            
+            Object.keys(recordParse).forEach(year => {
+                year = Number(year)//buscamos el year para poder ponerle numero, inicio y fin a las semanas
+                
+                const startYear = startOfYear(new Date(year, 0, 1))
+                const knowWeeks = addWeeks(startYear, weekName - 1)
+                const startWeek = startOfWeek(knowWeeks, {weekStartsOn: 1})
+                const endWeek = endOfWeek(knowWeeks, {weekStartsOn: 1})
+                const startWeekFormatted = format(startWeek, "ddMMM", {locale: es}).toLocaleLowerCase()
+                const endWeekFormatted = format(endWeek, "ddMMM", {locale: es}).toLowerCase()
+                //obteniendo los datos de la semana y formateandolos
+
+                const joinEndStart = `${startWeekFormatted}-${endWeekFormatted}`
+
+                
+                
+                
+            })
+        })
+        
+    })
+}) */
  
-
