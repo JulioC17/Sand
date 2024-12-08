@@ -103,4 +103,45 @@ export const showWeeksList = (lista) => {//esta funcion pinta una lista con los 
 
 export const showDayList = (dayList) => {
     
+    const record = localStorage.getItem("record")
+    const recordParse = JSON.parse(record)
+
+    Object.keys(recordParse).forEach(year => {
+        year = Number(year)
+        
+        Object.keys(recordParse[year]).forEach(month =>{
+            month = Number(month)
+            
+            Object.values(recordParse[year][month]).forEach(week => {
+               
+                Object.entries(week).forEach(day => {
+                
+                    const dayHours = Math.floor(day[1] / 3600000)
+                    const dayMinutes = Math.floor((day[1] % 3600000)/ 60000)
+                
+                    const dayHoursMinutesFormatted = `${dayHours}h ${dayMinutes}m`
+                
+                     day[0] = Number(day[0])
+                
+                    const nameMonth = new Date(year, month - 1, 1)
+                    const nameMonthFormatted = format(nameMonth, "MMM-yyyy", {locale: es}).toLowerCase()
+
+                    const allTogether = `${day[0]}-${nameMonthFormatted}`
+                
+                    const liDate = document.createElement("li")
+                    const h4LiDate = document.createElement("h4")
+                    const h4LiHours = document.createElement("h4")
+
+                    h4LiDate.innerHTML = allTogether
+                    h4LiHours.innerHTML = dayHoursMinutesFormatted
+                
+                    liDate.appendChild(h4LiDate)
+                    liDate.appendChild(h4LiHours)
+                
+                    dayList.appendChild(liDate)
+                })
+            })
+        })
+    })
+    
 }
