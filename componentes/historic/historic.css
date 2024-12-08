@@ -8,7 +8,6 @@
   }
 
 #historicBody {
-    border: solid 2px white;
     display: flex;
     flex-direction: column;
     justify-content: center;

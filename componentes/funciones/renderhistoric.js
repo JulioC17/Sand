@@ -50,8 +50,8 @@ export const showWeeksList = (lista) => {
     const record = localStorage.getItem("record")
     const recordParse = JSON.parse(record)
     //recuperamos el objeto de datos y lo parseamos
-    const year = Object.keys(recordParse)
-    console.log(year);
+    //vamos a mostrar solo los adtos de semanas y meses del anio en curso
+    
     
 
      
