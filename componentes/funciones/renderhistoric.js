@@ -17,7 +17,7 @@ export const count = (diasTotales, horas) => {//funcion para calcular los dias y
     const record = localStorage.getItem("record")
     const parseRecord = JSON.parse(record)
     let horasMes = 0
-    let totalDias = ""
+    let totalDias = 0
     
     if(parseRecord [year]){//si el anio del objeto del local estorage coincide con el anio actul...
         if (parseRecord [year] [month]){//si el anio y mes del objeto coincide con el anio y me actual
@@ -25,17 +25,22 @@ export const count = (diasTotales, horas) => {//funcion para calcular los dias y
 
             meses.forEach(mes => {//por cada uno de estos valores, buscamos los valores mas adentro...esperando obtener un objeto por cada dia/horas trabajadas por cada semana
                 const dias = Object.values(mes)//el valor en horas como tal de cada dia
-                 totalDias = dias.length //las cantidad de dias totales que entren en este array(cantidad de valores), seran por defecto entonces nuestra cantidad de dias trabajados
                 
-                
+                totalDias += dias.length //las cantidad de dias totales que entren en este array(cantidad de valores), seran por defecto entonces nuestra cantidad de dias trabajados
+                 
                 dias.forEach(horas => {//iteramos en cada dia para crear un array de horas totales
-                    
-                horasMes += horas//sumamos todo
+                 horasMes += horas//sumamos todo
+                
+                
                 })
             })
         }
     }
-
+    
+    console.log(totalDias);
+    
+    
+    
     const formatedHours = Math.floor(horasMes / 3600000)
     const formattedMinutes = Math.floor((horasMes % 3600000) / 60000)
     const horasTotalesFormatted = `${formatedHours}h ${formattedMinutes}m`
