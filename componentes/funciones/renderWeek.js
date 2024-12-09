@@ -29,8 +29,11 @@ const renderWeek = (titulo) => {
     
         titulo.innerHTML = `${convertedHours.toString().padStart(2, '0')} horas y ${convertedMinutes.toString().padStart(2, '0')} minutos`
     
-        if(convertedHours > 40){
+        if(convertedHours >= 40){
             titulo.style.color = "red"
+        }
+        if(convertedHours == 0 && convertedMinutes == 0){
+            titulo.innerHTML = "No has trabajado esta semana"
         }
     }
     
