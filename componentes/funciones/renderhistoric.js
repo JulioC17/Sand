@@ -44,13 +44,10 @@ export const count = (diasTotales, horas) => {//funcion para calcular los dias y
     const formattedMinutes = Math.floor((horasMes % 3600000) / 60000)
     const horasTotalesFormatted = `${formatedHours}h ${formattedMinutes}m`
     //formateamos las horas ya que viene de un epoch time
-   if(!totalDias || !horasTotalesFormatted == 0){
-        diasTotales.innerHTML = 0
-        horas.innerHTML = 0
-   }else{
-        diasTotales.innerHTML = totalDias//pa dentro ya
-        horas.innerHTML = horasTotalesFormatted//pa dentro ya ostia
-   }
+   
+   
+    diasTotales.innerHTML = totalDias//pa dentro ya
+    horas.innerHTML = horasTotalesFormatted//pa dentro ya ostia
 }
 
 export const showWeeksList = (lista) => {//esta funcion pinta una lista con los rangos de semanas y las horas trabajadas en esos rangos y los pinta en el div showlist
