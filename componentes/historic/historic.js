@@ -4,6 +4,7 @@ import { count } from '../funciones/renderhistoric'
 import main from '../principal/principal'
 import { showWeeksList } from '../funciones/renderhistoric'
 import { showDayList } from '../funciones/renderhistoric'
+import { showMonthList } from '../funciones/renderhistoric'
 
 
 const historic = () => {
@@ -61,7 +62,8 @@ const historic = () => {
     })
 
     monthsBtn.addEventListener("click", () => {
-        
+        showlist.innerHTML = ""
+        showMonthList(showlist)
     })
     
     
