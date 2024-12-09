@@ -53,7 +53,6 @@ export const showWeeksList = (lista) => {//esta funcion pinta una lista con los 
     Object.keys(recordParse).forEach(year => {
         year = Number(year)
         
-        
         Object.values(recordParse[year]).forEach(week => {
             //altura de la semana
             
@@ -61,31 +60,27 @@ export const showWeeksList = (lista) => {//esta funcion pinta una lista con los 
                 let sumaHorasSemanas = 0
                 weekNumber = Number(weekNumber)
                 
-                Object.values(week[weekNumber]).forEach(day => {
-                            
-                        sumaHorasSemanas += day
-                        console.log(sumaHorasSemanas);
-                        
-                        
+                    Object.values(week[weekNumber]).forEach(day => {
+                         sumaHorasSemanas += day
                     })
            
-            const inicioYear = startOfYear(new Date(year, 0, 1))
-            const weeksNumber = addWeeks(inicioYear, weekNumber - 1)
-            const inicioSemana = startOfWeek(weeksNumber, {weekStartsOn: 1})
+                const inicioYear = startOfYear(new Date(year, 0, 1))
+                const weeksNumber = addWeeks(inicioYear, weekNumber - 1)
+                const inicioSemana = startOfWeek(weeksNumber, {weekStartsOn: 1})
 
-            const finSemana = endOfWeek(weeksNumber, {weekStartsOn: 1})
+                const finSemana = endOfWeek(weeksNumber, {weekStartsOn: 1})
                    
-            const inicioSemanaFormatted = format(inicioSemana, "ddMMM", {locale: es}).toLowerCase()
+                const inicioSemanaFormatted = format(inicioSemana, "ddMMM", {locale: es}).toLowerCase()
 
-            const finSemanaFormatted = format(finSemana, "ddMMM", {locale: es}).toLowerCase()
+                const finSemanaFormatted = format(finSemana, "ddMMM", {locale: es}).toLowerCase()
 
-            const weekFormatted = `${inicioSemanaFormatted}-${finSemanaFormatted}`
+                const weekFormatted = `${inicioSemanaFormatted}-${finSemanaFormatted}`
 
-            const sumaHoursConvertted = Math.floor(sumaHorasSemanas / 3600000)
+                const sumaHoursConvertted = Math.floor(sumaHorasSemanas / 3600000)
 
-            const sumaMinutesConvertted = Math.floor((sumaHorasSemanas % 3600000) / 60000) 
+                const sumaMinutesConvertted = Math.floor((sumaHorasSemanas % 3600000) / 60000) 
 
-            const SumaTotalFormatted = `${sumaHoursConvertted}h ${sumaMinutesConvertted}m`
+                 const SumaTotalFormatted = `${sumaHoursConvertted}h ${sumaMinutesConvertted}m`
 
                 const liWeek = document.createElement("li")
                 const h4WeekRange = document.createElement("h4")
@@ -97,12 +92,9 @@ export const showWeeksList = (lista) => {//esta funcion pinta una lista con los 
                 liWeek.appendChild(h4HoursPerWeekRange)
 
                 lista.appendChild(liWeek)
-            
-        })
-    //aqui
+            })
         })
     })
-   
 }
 
 export const showDayList = (dayList) => {//esta funcion pinta por defecto en el div showlist todas las horas trabajadas por cada dia,
