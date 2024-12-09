@@ -5,6 +5,7 @@ import main from '../principal/principal'
 import { showWeeksList } from '../funciones/renderhistoric'
 import { showDayList } from '../funciones/renderhistoric'
 import { showMonthList } from '../funciones/renderhistoric'
+import { showYearList } from '../funciones/renderhistoric'
 
 
 const historic = () => {
@@ -50,6 +51,7 @@ const historic = () => {
     const diasMes = document.querySelector("#h2Dias")
     const weeksBtn = document.querySelector("#semanas")
     const monthsBtn = document.querySelector("#meses")
+    const yearBtn = document.querySelector("#anios")
     const showlist = document.querySelector("#showlist")
     
     tituloMes(titulomes)
@@ -65,8 +67,11 @@ const historic = () => {
         showlist.innerHTML = ""
         showMonthList(showlist)
     })
-    
-    
+
+    yearBtn.addEventListener("click", () =>{
+        showlist.innerHTML = ""
+        showYearList(showlist)
+    })
     
 }
 

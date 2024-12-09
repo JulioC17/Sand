@@ -50,18 +50,6 @@
     box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.487);
 }
 
-/* #historic:hover{
-    position: relative;
-  transform: scale(1.1);
-  box-shadow: 1px 1px 7px white;
-}
-
-#edit:hover{
-    position: relative;
-  transform: scale(1.1);
-  box-shadow: 1px 1px 7px white;
-} */
-
 #bienvenida{
     display: flex;
     flex-direction: column;
@@ -119,9 +107,16 @@
     bottom: 120px;
 }
 
-/* #fichar:hover{
-    box-shadow: 0.1px 0.1px 20px white;
-    position: relative;
-    scale: 1.1;
-    cursor: pointer;
-} */
+@media (min-width: 850px){
+    #historic, #edit{
+        width: 200px;
+    }
+
+    #worked{
+        width: 600px;
+    }
+
+    #fichar{
+        width: 600px;
+    }
+}

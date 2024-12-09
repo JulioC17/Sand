@@ -37,7 +37,6 @@ export const count = (diasTotales, horas) => {//funcion para calcular los dias y
         }
     }
     
-    console.log(totalDias);
     
     
     
@@ -45,8 +44,13 @@ export const count = (diasTotales, horas) => {//funcion para calcular los dias y
     const formattedMinutes = Math.floor((horasMes % 3600000) / 60000)
     const horasTotalesFormatted = `${formatedHours}h ${formattedMinutes}m`
     //formateamos las horas ya que viene de un epoch time
-    diasTotales.innerHTML = totalDias//pa dentro ya
-    horas.innerHTML = horasTotalesFormatted//pa dentro ya ostia
+   if(!totalDias || !horasTotalesFormatted == 0){
+        diasTotales.innerHTML = 0
+        horas.innerHTML = 0
+   }else{
+        diasTotales.innerHTML = totalDias//pa dentro ya
+        horas.innerHTML = horasTotalesFormatted//pa dentro ya ostia
+   }
 }
 
 export const showWeeksList = (lista) => {//esta funcion pinta una lista con los rangos de semanas y las horas trabajadas en esos rangos y los pinta en el div showlist
@@ -147,7 +151,7 @@ export const showDayList = (dayList) => {//esta funcion pinta por defecto en el 
     
 }
 
-export const showMonthList = (monthList) =>{
+export const showMonthList = (monthList) =>{ //funcion para pintar el total de horas realizadas en el mes en curso
     
     const record = localStorage.getItem("record")
     const recordParse = JSON.parse(record)
@@ -185,5 +189,38 @@ export const showMonthList = (monthList) =>{
             monthList.appendChild(liMonthDate)
             
         })
+    })
+}
+
+export const showYearList = (yearList) =>{
+    
+    const record = localStorage.getItem("record")
+    const recordParse = JSON.parse(record)
+
+    Object.keys(recordParse).forEach(year =>{
+        year = Number(year)
+        let sumaHourPerYear = 0
+        
+        Object.values(recordParse[year]).forEach(month => {
+            Object.values(month).forEach(week => {
+                Object.values(week).forEach(day => {
+                    sumaHourPerYear += day
+                })
+            })
+        })
+        
+        const yearHours = Math.floor(sumaHourPerYear / 3600000)
+        const yearMinutes = Math.floor((sumaHourPerYear % 3600000) / 60000)
+         const yearHourMinutesFormatted = `${yearHours}h ${yearMinutes}m`
+    
+        const liYear = document.createElement("li")
+        const h4YearDate = document.createElement("h4")
+        const h4YearHours = document.createElement("h4")
+
+        h4YearDate.innerHTML = year
+        h4YearHours.innerHTML = yearHourMinutesFormatted
+        liYear.appendChild(h4YearDate)
+        liYear.appendChild(h4YearHours)
+        yearList.appendChild(liYear)
     })
 }
