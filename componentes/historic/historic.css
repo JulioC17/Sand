@@ -164,7 +164,7 @@
     border-radius: 10px;
     color: var(--color3);
     width: 90%;
-    height:20% ;
+    min-height:20% ;
     overflow-y: auto;
     padding: 5%;
     display: flex;
@@ -194,7 +194,7 @@
 
     #historicDiv{
         width: 700px;
-        height: 150px;
+        min-height: 150px;
         grid-template-columns: 200px 200px 200px;
         grid-template-rows: 20px 110px;
         justify-content: space-around;
